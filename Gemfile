@@ -22,6 +22,8 @@ gem 'jquery-turbolinks'
 gem 'bootstrap-sass'
 gem "bower-rails"
 gem 'angular-rails-templates'
+gem 'angular-ui-bootstrap-rails'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
