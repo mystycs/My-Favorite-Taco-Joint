@@ -8,7 +8,22 @@
 </head>
 <body>
 
-<%= yield %>
+  <body ng-app="routerApp">
 
+  <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+          <a class="navbar-brand" ui-sref="#">Taco App</a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li><a ui-sref="home">Home</a></li>
+          <li><a ui-sref="list">My List</a></li>
+      </ul>
+  </nav>
+
+  <div class="container">
+
+      <div ui-view></div>
+
+  </div>
 </body>
 </html>
