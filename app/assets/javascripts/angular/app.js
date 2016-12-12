@@ -5,12 +5,20 @@ angular
       .state('home', {
         url: '/',
         templateUrl: 'home/index.html',
-        controller: 'HomeController as ctrl'
+        controller: 'HomeController'
+        // resolve: {
+        // posts: function(HomeService){
+        //   return HomeService.getLocations()
+        // }
       })
       .state('list', {
-        url: '/list',
+        url: '/mylist',
         templateUrl: 'home/list.html',
-        controller: 'HomeController as ctrl'
+        controller: 'List'
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'home/about.html',
       })
     $urlRouterProvider.otherwise('/');
   });
