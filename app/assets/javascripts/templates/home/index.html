@@ -1,5 +1,44 @@
 <div class="jumbotron text-center">
   <h1>Locations</h1>
   <p>Enter your <span class="text-danger">zip code</span> below.</p>
-  <input type="text" ng-model="search" ng-model-options="{ debounce: 800 }" placeholder="Enter your zip code" />
+  <!-- <input type="text" ng-model="search" ng-model-options="{ debounce: 800 }" placeholder="Enter your zip code" /> -->
+
+  <div ng-controller="HomeController">
+
+
+
+
+
+
+
+  <form name="form" class="validate-form">
+    <input id="searchCriteria"
+           ng-model="searchCriteria"
+           type="text"
+           title="required input"
+           placeholder="Enter your Location (City, State)"
+           required />
+
+    <button type="submit" class="btn btn-primary" ng-click="searchZipcode(searchCriteria)">
+      Search Location
+    </button>
+  </form>
+
+
+  <div ng-repeat="restaurants in locations">
+    <!-- {{restaurants.name}} -->
+    <div ng-repeat="restaurant in restaurants">
+      <img ng-src="{{ restaurant.thumb }}" /><br><br>
+      {{ restaurant.name }}<br><br>
+      {{ restaurant.location.address }}<br><br>
+    </div>
+  </div>
+
+
+
+
+
+  </div>
+
+
 </div>

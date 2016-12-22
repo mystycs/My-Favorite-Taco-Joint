@@ -4,5 +4,5 @@ function TacoLocationService($http) {
 }
 
 angular
-  .module('app')
+  .module('tacoApp')
   .service('TacoLocationService', TacoLocationService);
