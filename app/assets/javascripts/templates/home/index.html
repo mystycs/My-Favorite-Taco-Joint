@@ -5,13 +5,10 @@
 
   <div ng-controller="HomeController">
 
+    <input type="text" ng-change="searchZipcode(searchCriteria)" type="text" title="required input" ng-model="searchCriteria" placeholder="Enter your Location (City, State)"/>
 
 
-
-
-
-
-  <form name="form" class="validate-form">
+  <!-- <form name="form" class="validate-form">
     <input id="searchCriteria"
            ng-model="searchCriteria"
            type="text"
@@ -22,8 +19,9 @@
     <button type="submit" class="btn btn-primary" ng-click="searchZipcode(searchCriteria)">
       Search Location
     </button>
-  </form>
-
+  </form> -->
+  
+<br><br>
 
   <div ng-repeat="restaurants in locations">
     <!-- {{restaurants.name}} -->
@@ -35,10 +33,7 @@
   </div>
 
 
-
-
-
-  </div>
+</div>
 
 
 </div>
