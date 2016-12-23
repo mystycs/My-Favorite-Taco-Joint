@@ -1,2 +1,37 @@
-#locationlist {
+.locations-img {
+  float: left;
+  display: inline-block;
+  height: 150px;
+  width: 25%;
+  overflow: hidden;
+  -moz-box-shadow: 0 0 0px black;
+  -webkit-box-shadow: 0 0 0px black;
+  box-shadow: 0 0 0px black;
+}
+.locations-img img {
+  width: 100%;
+}
+.clear {
+  clear: both;
+}
+.listings {
+  -moz-box-shadow: 0 0 4px black;
+  -webkit-box-shadow: 0 0 4px black;
+  box-shadow: 0 0 4px black;
+}
+.main-attr {
+  float: left;
+  padding-left: 20px;
+  padding-top: 15px;
+  word-wrap: break-word;
+}
+.main-attr .rating {
+  margin-left: -75px;
+}
+.secondary-attr {
+  float: right;
+  padding-right: 20px;
+  padding-top: 15px;
+  width: 200px;
+  text-align: right;
 }

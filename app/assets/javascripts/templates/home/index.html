@@ -5,10 +5,10 @@
 
   <div ng-controller="HomeController">
 
-    <input type="text" ng-change="searchZipcode(searchCriteria)" type="text" title="required input" ng-model="searchCriteria" placeholder="Enter your Location (City, State)"/>
+    <input type="text" ng-change="searchZipcode(searchCriteria)" ng-model-options="{ debounce: 800 }" type="text" title="required input" ng-model="searchCriteria" placeholder="Enter your Location (City, State)" />
 
 
-  <!-- <form name="form" class="validate-form">
+    <!-- <form name="form" class="validate-form">
     <input id="searchCriteria"
            ng-model="searchCriteria"
            type="text"
@@ -21,19 +21,50 @@
     </button>
   </form> -->
 
-<br><br>
+    <br>
+    <br>
 
-<div ng-repeat="restaurants in locations">
-  <!-- {{restaurants.name}} -->
-  <div ng-repeat="restaurant in restaurants">
-    <img ng-src="{{ restaurant.thumb }}" /><br><br>
-    {{ restaurant.name }}<br><br>
-    {{ restaurant.location.address }}<br><br>
+    <!-- <div ng-repeat="restaurants in locations">
+      <div ng-repeat="restaurant in restaurants">
+        <div float="left" width="200">
+          <img ng-src="{{ restaurant.thumb }}" width="200px" /></div>
+        <div float="right">{{ restaurant.name }}</div>
+        <div float="right">{{ restaurant.location.address }}</div>
+      </div>
+    </div> -->
+
+  <div ng-repeat="restaurants in locations">
+    <div class="listings" ng-repeat="restaurant in restaurants">
+      <div class="locations-img">
+        <img src="https://b.zmtcdn.com/data/pictures/1/16763231/be963c2641c0d1facace8bfa7f3a3017_featured_v2.jpg" />
+      </div>
+      <div class="main-attr"><span><b>{{ restaurant.name }}</b></span>
+        <div class="rating">
+          <span>Rating: {{restaurant.user_rating.aggregate_rating}}</span>
+        </div>
+      </div>
+      <div class="secondary-attr">{{ restaurant.location.address }}</div>
+      <br style="clear: left;" />
+    </div>
   </div>
-</div>
 
 
-</div>
+
+
+
+    <!-- <div class="listings">
+      <div class="locations-img">
+        <img src="https://b.zmtcdn.com/data/pictures/1/16763231/be963c2641c0d1facace8bfa7f3a3017_featured_v2.jpg" /></div>
+      <div class="main-attr"><span><b>Pancho Villa Taqueria</b></span>
+        <div class="rating">
+          <span>Rating: 4.2</span></div>
+      </div>
+      <div class="secondary-attr">252 Prospect Park West, Brooklyn, NY 11215</div>
+      <br style="clear: left;" />
+    </div> -->
+
+
+  </div>
 
 
 </div>

@@ -20,7 +20,7 @@ function HomeController($scope, $http) {
       searchLocations(response.data.location_suggestions[0].entity_id, response.data.location_suggestions[0].entity_type)
 
     }, function errorCallback(response) {
-      // add error stuff
+      alert(response.data.message)
     });
 
   }
@@ -41,7 +41,7 @@ function HomeController($scope, $http) {
     }).then(function successCallback(response) {
       $scope.locations = response.data.restaurants
     }, function errorCallback(response) {
-      // add error stuff
+      alert(response.data.message)
     });
 
   }
