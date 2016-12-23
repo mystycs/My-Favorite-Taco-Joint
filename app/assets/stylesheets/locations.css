@@ -40,7 +40,8 @@
 }
 
 .addButton {
-  margin-right: 140px;
+  width: 50%;
+  /*margin-right: 140px;*/
   float: right;
   /*position: absolute;*/
   margin-top: 20px;
