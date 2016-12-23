@@ -41,6 +41,7 @@ function HomeController($scope, $http) {
       alert(response.data.message)
     });
   }
+  
 }
 
 angular
