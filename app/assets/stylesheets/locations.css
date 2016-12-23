@@ -38,3 +38,11 @@
   width: 200px;
   text-align: right;
 }
+
+.addButton {
+  margin-right: 140px;
+  float: right;
+  /*position: absolute;*/
+  margin-top: 20px;
+
+}

@@ -16,13 +16,10 @@ function HomeController($scope, $http) {
       responseType: 'json'
 
     }).then(function successCallback(response) {
-      //$scope.zipcode = response.data.location_suggestions[0].entity_id
       searchLocations(response.data.location_suggestions[0].entity_id, response.data.location_suggestions[0].entity_type)
-
     }, function errorCallback(response) {
       alert(response.data.message)
     });
-
   }
 
   function searchLocations(entity_id, entity_type) {
@@ -43,9 +40,7 @@ function HomeController($scope, $http) {
     }, function errorCallback(response) {
       alert(response.data.message)
     });
-
   }
-
 }
 
 angular

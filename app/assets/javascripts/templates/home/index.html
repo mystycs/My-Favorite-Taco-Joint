@@ -1,10 +1,10 @@
 <div class="jumbotron text-center">
   <h1>Locations</h1>
-  <p>Enter your <span class="text-danger">zip code</span> below.</p>
+  <p>Enter your <span class="text-danger">location</span> below.</p>
 
   <div ng-controller="HomeController">
 
-    <input type="text" ng-change="searchZipcode(searchCriteria)" ng-model-options="{ debounce: 800 }" type="text" title="required input" ng-model="searchCriteria" placeholder="Enter your Location (City, State)" />
+    <input type="text" class="form-control" ng-change="searchZipcode(searchCriteria)" ng-model-options="{ debounce: 400 }" type="text" title="required input" ng-model="searchCriteria" placeholder="Enter your Location (City, State)" />
     <br>
     <br>
 
@@ -19,6 +19,10 @@
           </div>
         </div>
         <div class="secondary-attr">{{ restaurant.location.address }}</div>
+        <div class="addButton">
+          <button type="button" class="btn btn-primary btn-lg">Add to List</button>
+        </div>
+
         <br style="clear: left;" />
       </div>
     </div>
