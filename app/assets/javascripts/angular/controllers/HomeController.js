@@ -1,5 +1,7 @@
 function HomeController($scope, $http) {
 
+  var userkey = "4e44174751d2676221b5e9cc41451047" // zomato api key
+
   $scope.searchZipcode = function(searchCriteria) {
     var zomatoZipSearch = "https://developers.zomato.com/api/v2.1/locations?query="
 
@@ -9,7 +11,7 @@ function HomeController($scope, $http) {
       method: 'GET',
       url: zomatoZipSearch,
       headers: {
-        'user-key': "4e44174751d2676221b5e9cc41451047"
+        'user-key': userkey
       },
       responseType: 'json'
 
@@ -32,7 +34,7 @@ function HomeController($scope, $http) {
       method: 'GET',
       url: zomatoLocationSearch,
       headers: {
-        'user-key': "4e44174751d2676221b5e9cc41451047"
+        'user-key': userkey
       },
       responseType: 'json'
 
@@ -43,9 +45,6 @@ function HomeController($scope, $http) {
     });
 
   }
-
-
-
 
 }
 

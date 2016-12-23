@@ -20,17 +20,17 @@
       Search Location
     </button>
   </form> -->
-  
+
 <br><br>
 
-  <div ng-repeat="restaurants in locations">
-    <!-- {{restaurants.name}} -->
-    <div ng-repeat="restaurant in restaurants">
-      <img ng-src="{{ restaurant.thumb }}" /><br><br>
-      {{ restaurant.name }}<br><br>
-      {{ restaurant.location.address }}<br><br>
-    </div>
+<div ng-repeat="restaurants in locations">
+  <!-- {{restaurants.name}} -->
+  <div ng-repeat="restaurant in restaurants">
+    <img ng-src="{{ restaurant.thumb }}" /><br><br>
+    {{ restaurant.name }}<br><br>
+    {{ restaurant.location.address }}<br><br>
   </div>
+</div>
 
 
 </div>
