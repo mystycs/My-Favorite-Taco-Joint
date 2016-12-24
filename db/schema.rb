@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(version: 20161224051949) do
 
   create_table "mylists", force: :cascade do |t|
-    t.integer  "res_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "res_id",     limit: 8
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end
