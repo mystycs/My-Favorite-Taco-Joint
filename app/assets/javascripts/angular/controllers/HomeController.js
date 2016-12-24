@@ -3,7 +3,20 @@ function HomeController($scope, $http) {
   var userkey = "4e44174751d2676221b5e9cc41451047" // zomato api key
 
   $scope.saveRestaurant = function(res_id) {
-    
+
+    $http({
+      method: 'POST',
+      url: "http://localhost:3000/mylist?res_id=" + res_id,
+      responseType: 'json'
+    }).then(function successCallback(response) {
+      alert("success")
+
+    }, function errorCallback(response) {
+      alert("no success")
+    });
+
+
+
   }
 
   $scope.searchZipcode = function(searchCriteria) {
@@ -45,6 +58,8 @@ function HomeController($scope, $http) {
       alert(response.data.message)
     });
   }
+
+
 
 }
 
