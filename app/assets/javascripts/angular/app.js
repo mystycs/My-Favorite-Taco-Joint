@@ -6,15 +6,15 @@ angular
         url: '/',
         templateUrl: 'home/index.html',
         controller: 'HomeController'
-        // resolve: {
-        // posts: function(HomeService){
-        //   return HomeService.getLocations()
-        // }
+          // resolve: {
+          // posts: function(HomeService){
+          //   return HomeService.getLocations()
+          // }
       })
       .state('list', {
         url: '/mylist',
-        templateUrl: 'home/list.html',
-        controller: 'List'
+        templateUrl: 'home/mylist.html',
+        controller: 'MylistController'
       })
       .state('about', {
         url: '/about',

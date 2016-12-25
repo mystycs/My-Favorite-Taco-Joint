@@ -6,7 +6,7 @@ function HomeController($scope, $http) {
 
     $http({
       method: 'POST',
-      url: "http://localhost:3000/mylist?res_id=" + res_id,
+      url: "/mylist?res_id=" + res_id,
       responseType: 'json'
     }).then(function successCallback(response) {
       alert("success")

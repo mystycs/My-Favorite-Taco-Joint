@@ -21,7 +21,7 @@ class MylistController < ApplicationController
   end
 
   def show
-    @mylist = Mylist.find(params[:id])
+    @mylist = Mylist.all
     respond_to do |format|
       format.html { render :show }
       format.json { render json: @mylist }
