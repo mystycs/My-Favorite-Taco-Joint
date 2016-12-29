@@ -1,3 +1,5 @@
+var userkey = "4e44174751d2676221b5e9cc41451047" // zomato api key
+
 angular
   .module('tacoApp', ['ui.router', 'ngResource', 'templates'])
   .config(function($stateProvider, $urlRouterProvider) {

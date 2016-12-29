@@ -1,7 +1,5 @@
 function HomeController($scope, $http) {
 
-  var userkey = "4e44174751d2676221b5e9cc41451047" // zomato api key
-
   $scope.saveRestaurant = function(res_id) {
 
     $http({
