@@ -43,6 +43,29 @@ function MylistController($scope, $http) {
 
   }
 
+    $scope.deleteRestaurant = function(res_id) {
+    var mylistURL = "mylist/"
+
+    mylistURL = mylistURL + res_id;
+
+    $http({
+      method: 'DELETE',
+      url: mylistURL,
+      // headers: {
+      //   'user-key': userkey
+      // },
+      responseType: 'HTTP'
+
+    }).then(function successCallback(response) {
+      //$scope.mylist += JSON.stringify(response.data)
+      alert("success")
+      //  $scope.mylist = response.data
+    }, function errorCallback(response) {
+      alert(response.data.message)
+    });
+
+  }
+
 }
 
 angular
