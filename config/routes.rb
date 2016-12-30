@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'application#index'
 
   # resources :mylist, defaults: { format: :json }
-  resources :mylist, only: [:show, :index], param: :res_id, defaults: { format: :json }
+  resources :mylist, only: [:show, :index, :create], param: :res_id, defaults: { format: :json }
   resources :mylist, only: [:destroy], param: :res_id
 
   #  resources :mylist, param: :res_id, defaults: { format: :json }

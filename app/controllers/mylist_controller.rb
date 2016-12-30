@@ -13,7 +13,7 @@ class MylistController < ApplicationController
     @mylist = Mylist.new
     @mylist.res_id = params[:res_id]
     if @mylist.save
-      redirect_to mylist_path(@mylist)
+      render json: {}, status: :no_content
     else
       render :new
       render json: @mylist.errors
