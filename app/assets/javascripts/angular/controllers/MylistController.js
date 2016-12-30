@@ -61,7 +61,7 @@ function MylistController($scope, $http) {
       alert("success")
       //  $scope.mylist = response.data
     }, function errorCallback(response) {
-      alert(response.data.message)
+        alert("no success")
     });
 
   }
