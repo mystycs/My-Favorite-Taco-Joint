@@ -1,5 +1,5 @@
 class MylistController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:create]
+  skip_before_action :verify_authenticity_token, only: [:create, :destroy]
 
   def index
     @mylist = Mylist.all
@@ -26,8 +26,10 @@ class MylistController < ApplicationController
       format.html { render :show }
       format.json { render json: @mylist }
     end
-
   end
 
-
+  def destroy
+    @mylist = Mylist.find_by(res_id: params[:res_id])
+    @mylist.destroy
+  end
 end

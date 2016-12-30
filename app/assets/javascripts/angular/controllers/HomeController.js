@@ -12,9 +12,6 @@ function HomeController($scope, $http) {
     }, function errorCallback(response) {
       alert("no success")
     });
-
-
-
   }
 
   $scope.searchZipcode = function(searchCriteria) {
@@ -56,8 +53,6 @@ function HomeController($scope, $http) {
       alert(response.data.message)
     });
   }
-
-
 
 }
 

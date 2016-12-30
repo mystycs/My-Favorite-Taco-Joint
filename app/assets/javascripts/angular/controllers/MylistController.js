@@ -36,7 +36,7 @@ function MylistController($scope, $http) {
     }).then(function successCallback(response) {
       //$scope.mylist += JSON.stringify(response.data)
       $scope.mylist.push(response.data)
-        //  $scope.mylist = response.data
+      //  $scope.mylist = response.data
     }, function errorCallback(response) {
       alert(response.data.message)
     });

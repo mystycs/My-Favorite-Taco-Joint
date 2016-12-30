@@ -7,13 +7,10 @@
 
       {{list}}
     </div> -->
-<br>
-
-
-
+    <br>
     <div class="listings" ng-repeat="list in mylist">
       <div class="locations-img">
-        <img src="{{ list.thumb }}" />
+        <img src="{{list.thumb}}" />
       </div>
       <div class="main-attr"><span><b>{{ list.name }}</b></span>
         <div class="rating">
@@ -21,7 +18,10 @@
         </div>
       </div>
       <div class="secondary-attr">{{ list.location.address }}</div>
-
+      <div class="addButton">
+        <button type="button" class="btn btn-danger btn-lg" ng-click="deleteRestaurant(list.R.res_id)">Delete this location</button>
+        <!-- {{restaurant.R.res_id}} -->
+      </div>
       <br style="clear: left;" />
     </div>
   </div>
