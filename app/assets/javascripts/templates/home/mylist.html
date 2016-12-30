@@ -3,11 +3,27 @@
   <div class="jumbotron text-center">
     <h2>My Favorite Taco Locations</h2>
     <!-- {{mylist}} -->
-    {{mylist}}
     <!-- <div ng-repeat="list in mylist">
 
       {{list}}
     </div> -->
+<br>
+
+
+
+    <div class="listings" ng-repeat="list in mylist">
+      <div class="locations-img">
+        <img src="{{ list.thumb }}" />
+      </div>
+      <div class="main-attr"><span><b>{{ list.name }}</b></span>
+        <div class="rating">
+          <span>Rating: {{list.user_rating.aggregate_rating}}</span>
+        </div>
+      </div>
+      <div class="secondary-attr">{{ list.location.address }}</div>
+
+      <br style="clear: left;" />
+    </div>
   </div>
 
 </div>

@@ -10,6 +10,7 @@ function MylistController($scope, $http) {
     //getResData(response.data)
 
     $scope.mylist = []
+
     for (var i = 0; i < response.data.length; i++) {
       getResData(response.data[i].res_id)
     }
