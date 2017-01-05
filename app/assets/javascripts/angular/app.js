@@ -22,5 +22,26 @@ angular
         url: '/about',
         templateUrl: 'home/about.html',
       })
+      // .state('list.location', {
+      //   url: '/location',
+      //   //url: '/location/:id',
+      //   templateUrl: 'home/location.html',
+      //   //controller: 'LocationController'
+      //   // resolve: {
+      //   //   post: function($stateParams, PostsService) {
+      //   //     return PostsService.getPost($stateParams.id);
+      //   //   }
+      //   // }
+      // })
+      .state('list.location', {
+        url: '/location/:id',
+        templateUrl: 'home/location.html',
+        //controller: 'LocationController'
+        // resolve: {
+        //   post: function($stateParams, PostsService) {
+        //     return PostsService.getPost($stateParams.id);
+        //   }
+        // }
+      })
     $urlRouterProvider.otherwise('/');
   });
