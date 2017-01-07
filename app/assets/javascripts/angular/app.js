@@ -36,7 +36,7 @@ angular
       .state('list.location', {
         url: '/location/:id',
         templateUrl: 'home/location.html',
-        //controller: 'LocationController'
+        controller: 'LocationController'
         // resolve: {
         //   post: function($stateParams, PostsService) {
         //     return PostsService.getPost($stateParams.id);
