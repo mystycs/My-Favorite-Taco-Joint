@@ -18,6 +18,10 @@ angular
         url: '/about',
         templateUrl: 'home/about.html',
       })
+      .state('itsrainingtacos', {
+        url: '/itsrainingtacos',
+        templateUrl: 'home/itsrainingtacos.html',
+      })
       .state('list.location', {
         url: '/location/:id',
         templateUrl: 'home/location.html',
