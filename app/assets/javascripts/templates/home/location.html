@@ -13,5 +13,15 @@
   <h3>Average cost for two: ${{location.average_cost_for_two}}</h3>
   <h3>Rating: <span style="color:#{{location.user_rating.rating_color}}">{{location.user_rating.aggregate_rating}}/5</span> </h3>
   <h3>Online Delivery Available: {{location.has_online_delivery == true ? "Yes" : "No"}}</h3>
+  <h2><b>Reviews</b></h2>
+  <div ng-repeat="review in reviews">
+    <div class="reviews" ng-repeat="review in review">
+      <b>Name:</b> {{review.review.user.name}}
+      <br>
+      <b>Date:</b> {{review.review.review_time_friendly}}
+      <br>
+      <b>Review:</b> {{review.review.review_text}}
+    </div>
+  </div>
   <button type="button" class="btn btn-danger btn-lg" ng-click="deleteRestaurant(location.id)">Delete this location</button>
 </div>

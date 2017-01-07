@@ -1,0 +1,7 @@
+.reviews {
+  -moz-box-shadow: 0 0 4px black;
+  -webkit-box-shadow: 0 0 4px black;
+  box-shadow: 0 0 4px black;
+  text-align: left;
+
+}

@@ -8,7 +8,6 @@
   -webkit-box-shadow: 0 0 4px black;
   box-shadow: 0 0 4px black;
   background-image: url("http://i.imgur.com/VmBnrOB.jpg");
-
 }
 .locations-img img {
   width: 100%;
@@ -38,12 +37,10 @@
   width: 200px;
   text-align: right;
 }
-
 .addButton {
   width: 50%;
   /*margin-right: 140px;*/
   float: right;
   /*position: absolute;*/
   margin-top: 20px;
-
 }

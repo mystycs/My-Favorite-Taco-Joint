@@ -24,6 +24,26 @@ function LocationController($scope, $http, $stateParams) {
     alert(response.data.message)
   });
 
+  var zomatoReviewSearch = "https://developers.zomato.com/api/v2.1/reviews"
+
+  zomatoReviewSearch = zomatoReviewSearch + '?res_id=' + currentId + '&count=5';
+
+  $http({
+    method: 'GET',
+    url: zomatoReviewSearch,
+    headers: {
+      'user-key': userkey
+    },
+    responseType: 'json'
+
+  }).then(function successCallback(response) {
+    //$scope.mylist += JSON.stringify(response.data)
+    $scope.reviews = response.data
+      //  $scope.mylist = response.data
+  }, function errorCallback(response) {
+    alert(response.data.message)
+  })
+
 
   $scope.deleteRestaurant = function(currentId) {
     var mylistURL = "mylist/"
