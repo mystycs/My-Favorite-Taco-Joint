@@ -1,11 +1,12 @@
 <div ng-controller="HomeController">
-  <a ui-sref="list.location">Go to the nested view</a>  <!-- temp nested view shortcut -->
-
 
   <div class="jumbotron text-center">
-    <ui-view>  <!-- hide parent view -->
-      <div ng-hide="hideIt"> <!-- hide parent view -->
-    </ui-view> <!-- hide parent view -->
+    <ui-view>
+      <!-- hide parent view -->
+      <div ng-hide="hideIt">
+        <!-- hide parent view -->
+    </ui-view>
+    <!-- hide parent view -->
 
     <h2>My Favorite Taco Locations</h2>
     <!-- {{mylist}} -->
@@ -15,10 +16,12 @@
     </div> -->
     <br>
     <div class="listings" ng-repeat="list in mylist">
+      <!-- temp nested view shortcut -->
+
       <div class="locations-img">
         <img src="{{list.thumb}}" />
       </div>
-      <div class="main-attr"><span><b>{{ list.name }}</b></span>
+      <div class="main-attr"><span><b>  <a ui-sref="list.location({id: list.id})">{{ list.name }}</a></b></span>
         <div class="rating">
           <span>Rating: {{list.user_rating.aggregate_rating}}</span>
         </div>
@@ -30,6 +33,6 @@
       </div>
       <br style="clear: left;" />
     </div>
-  </div>
+    </div>
 
-</div>
+  </div>

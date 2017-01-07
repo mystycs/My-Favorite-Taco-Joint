@@ -7,5 +7,11 @@
 </div> -->
 
 <div ng-controller="LocationController">
-  YO THIS IS LOCATION.HTML {{title}}
+  <h2>{{location.name}}</h2>
+  <img src="{{location.featured_image}}" />
+  <h3>{{location.location.address}}</h3>
+  <h3>Average cost for two: ${{location.average_cost_for_two}}</h3>
+  <h3>Rating: <span style="color:#{{location.user_rating.rating_color}}">{{location.user_rating.aggregate_rating}}/5</span> </h3>
+  <h3>Online Delivery Available: {{location.has_online_delivery == true ? "Yes" : "No"}}</h3>
+  <button type="button" class="btn btn-danger btn-lg" ng-click="deleteRestaurant(location.id)">Delete this location</button>
 </div>
