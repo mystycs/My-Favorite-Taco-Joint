@@ -19,7 +19,7 @@ Enter the following commands below
    $ rake db:migrate
    ```
 
-Next, type the below and launch the server localhost:3000
+Next, type the command below and launch the server localhost:3000
 
    ```
    $ rails s
