@@ -12,7 +12,7 @@ An Angular based front-end app which allows the user to organize their favorite 
 
 ##Usage
 
-At first type the below
+Enter the following commands below
 
    ```
    $ bundle
