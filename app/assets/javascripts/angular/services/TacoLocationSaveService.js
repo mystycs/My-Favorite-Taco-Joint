@@ -1,10 +1,12 @@
 function TacoLocationSaveService($http) {
 
   this.saveRestaurant = function(res_id) {
+    var myListSaveUrl = "/mylist?res_id="
+    myListSaveUrl = myListSaveUrl + res_id
 
     return $http({
       method: 'POST',
-      url: "/mylist?res_id=" + res_id,
+      url: myListSaveUrl,
       responseType: 'json'
     }).then(function successCallback(response) {
       alert("success")
@@ -16,8 +18,7 @@ function TacoLocationSaveService($http) {
 
   this.deleteRestaurant = function(res_id) {
     var mylistURL = "mylist/"
-
-    mylistURL = mylistURL + res_id;
+    mylistURL = mylistURL + res_id
 
     return $http({
       method: 'DELETE',
@@ -30,6 +31,8 @@ function TacoLocationSaveService($http) {
       alert("no success")
     });
   }
+
+
 }
 
 angular

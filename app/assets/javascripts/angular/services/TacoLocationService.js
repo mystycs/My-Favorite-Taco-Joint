@@ -79,6 +79,52 @@ function TacoLocationService($http) {
     });
   }
 
+  this.getLocationData = function(currentId) {
+    var zomatoResSearch = "https://developers.zomato.com/api/v2.1/restaurant"
+
+    zomatoResSearch = zomatoResSearch + '?res_id=' + currentId;
+
+    return $http({
+      method: 'GET',
+      url: zomatoResSearch,
+      headers: {
+        'user-key': userkey
+      },
+      responseType: 'json'
+
+    }).then(function successCallback(response) {
+      //$scope.mylist += JSON.stringify(response.data)
+      return response.data
+        //  $scope.mylist = response.data
+    }, function errorCallback(response) {
+      alert(response.data.message)
+    });
+  }
+
+  this.getReviews = function(currentId){
+    var zomatoReviewSearch = "https://developers.zomato.com/api/v2.1/reviews"
+
+    zomatoReviewSearch = zomatoReviewSearch + '?res_id=' + currentId + '&count=5';
+
+    return $http({
+      method: 'GET',
+      url: zomatoReviewSearch,
+      headers: {
+        'user-key': userkey
+      },
+      responseType: 'json'
+
+    }).then(function successCallback(response) {
+      //$scope.mylist += JSON.stringify(response.data)
+      return response.data
+        //  $scope.mylist = response.data
+    }, function errorCallback(response) {
+      alert(response.data.message)
+    })
+
+  }
+
+
 }
 
 angular
