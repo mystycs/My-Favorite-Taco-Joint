@@ -1,27 +1,27 @@
 function HomeController($scope, $http, TacoLocationService, TacoLocationSaveService) {
 
   $scope.searchLocations = function(searchCriteria) {
-      // var test = {}
-      TacoLocationService
-        .searchZipcode(searchCriteria)
-        .then(function(response) {
+    // var test = {}
+    TacoLocationService
+      .searchZipcode(searchCriteria)
+      .then(function(response) {
 
-          //alert(JSON.stringify(response.data.location_suggestions[0].entity_type));
+        //alert(JSON.stringify(response.data.location_suggestions[0].entity_type));
 
-          TacoLocationService
-            .searchLocations(response.data.location_suggestions[0].entity_id, response.data.location_suggestions[0].entity_type)
-            .then(function(response) {
+        TacoLocationService
+          .searchLocations(response.data.location_suggestions[0].entity_id, response.data.location_suggestions[0].entity_type)
+          .then(function(response) {
 
-              $scope.locations = response
+            $scope.locations = response
 
-            });
+          });
 
 
-        });
+      });
 
-    }
+  }
 
-    $scope.saveRestaurant = function(res_id){
+  $scope.saveRestaurant = function(res_id) {
 
       TacoLocationSaveService.saveRestaurant(res_id)
 
