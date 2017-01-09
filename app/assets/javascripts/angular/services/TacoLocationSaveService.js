@@ -14,7 +14,22 @@ function TacoLocationSaveService($http) {
     });
   }
 
+  this.deleteRestaurant = function(res_id) {
+    var mylistURL = "mylist/"
 
+    mylistURL = mylistURL + res_id;
+
+    return $http({
+      method: 'DELETE',
+      url: mylistURL,
+      responseType: 'HTTP'
+
+    }).then(function successCallback(response) {
+      alert("success")
+    }, function errorCallback(response) {
+      alert("no success")
+    });
+  }
 }
 
 angular

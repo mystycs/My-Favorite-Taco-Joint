@@ -2,24 +2,11 @@
 
   <div class="jumbotron text-center">
     <ui-view>
-      <!-- hide parent view -->
       <div ng-hide="hideIt">
-        <!-- hide parent view -->
     </ui-view>
-    <!-- hide parent view -->
-
     <h2>My Favorite Taco Locations</h2>
-    <!-- {{mylist}} -->
-    <!-- <div ng-repeat="list in mylist">
-
-      {{list}}
-    </div> -->
     <br>
-
-    <!-- {{mylist}} -->
     <div class="listings" ng-repeat="list in mylist">
-      <!-- temp nested view shortcut -->
-
       <div class="locations-img">
         <img src="{{list.thumb}}" />
       </div>
@@ -31,10 +18,9 @@
       <div class="secondary-attr">{{ list.location.address }}</div>
       <div class="addButton">
         <button type="button" class="btn btn-danger btn-lg" ng-click="deleteRestaurant(list.R.res_id)">Delete this location</button>
-        <!-- {{restaurant.R.res_id}} -->
       </div>
       <br style="clear: left;" />
     </div>
     </div>
-
+    
   </div>
