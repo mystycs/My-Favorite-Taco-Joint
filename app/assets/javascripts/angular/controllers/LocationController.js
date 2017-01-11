@@ -1,4 +1,4 @@
-function LocationController($scope, $http, $stateParams, TacoLocationService, TacoLocationSaveService) {
+function LocationController($scope, $http, $stateParams, TacoLocationService, TacoLocationSaveService, $state) {
   var currentId = $stateParams.id;
 
   TacoLocationService.getLocationData(currentId).then(function(value) {
@@ -11,6 +11,7 @@ function LocationController($scope, $http, $stateParams, TacoLocationService, Ta
 
   $scope.deleteRestaurant = function(currentId) {
     TacoLocationSaveService.deleteRestaurant(currentId)
+    $state.go('list', null, { reload: true });
   }
 
 }

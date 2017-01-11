@@ -1,6 +1,6 @@
 //var userkey = "4e44174751d2676221b5e9cc41451047" // zomato api key mystycs
-// var userkey = "a2e91ad8616e55349e523adbabd30c86" // zomato api key optweet
-var userkey = "ba6eced44d292ada927270a40079f1a0" // zomato api key third account tom
+var userkey = "a2e91ad8616e55349e523adbabd30c86" // zomato api key optweet
+//var userkey = "ba6eced44d292ada927270a40079f1a0" // zomato api key third account tom
 
 
 angular

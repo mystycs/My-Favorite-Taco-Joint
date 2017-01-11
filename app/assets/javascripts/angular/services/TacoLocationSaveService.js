@@ -1,4 +1,4 @@
-function TacoLocationSaveService($http) {
+function TacoLocationSaveService($http, $window) {
 
   this.saveRestaurant = function(res_id) {
     var myListSaveUrl = "/mylist?res_id="
@@ -27,6 +27,8 @@ function TacoLocationSaveService($http) {
 
     }).then(function successCallback(response) {
       alert("success")
+      // $window.location.href = '/#/mylist';
+      // $window.location.reload();
     }, function errorCallback(response) {
       alert("no success")
     });

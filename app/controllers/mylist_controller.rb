@@ -32,6 +32,5 @@ class MylistController < ApplicationController
     @mylist = Mylist.find_by(res_id: params[:res_id])
     @mylist.destroy
     render json: {}, status: :no_content
-
   end
 end
