@@ -1,5 +1,7 @@
 function HomeController($scope, $http, TacoLocationService, TacoLocationSaveService) {
 
+  // var votes;
+
   $scope.searchLocations = function(searchCriteria) {
     TacoLocationService
       .searchZipcode(searchCriteria)

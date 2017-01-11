@@ -51,6 +51,7 @@ function TacoLocationService($http) {
     }).then(function successCallback(response) {
         for (var i = 0; i < response.data.length; i++) {
           getResData(response.data[i].res_id, responseData)
+            // response.data[i].upVotes = 0
         }
         return responseData
       },
@@ -73,6 +74,7 @@ function TacoLocationService($http) {
       responseType: 'json'
 
     }).then(function successCallback(response) {
+      response.data.upVotes = 0
       responseData.push(response.data)
     }, function errorCallback(response) {
       alert(response.data.message)
@@ -101,7 +103,7 @@ function TacoLocationService($http) {
     });
   }
 
-  this.getReviews = function(currentId){
+  this.getReviews = function(currentId) {
     var zomatoReviewSearch = "https://developers.zomato.com/api/v2.1/reviews"
 
     zomatoReviewSearch = zomatoReviewSearch + '?res_id=' + currentId + '&count=5';
