@@ -12,14 +12,14 @@ An Angular based front-end app which allows the user to organize their favorite 
 
 ##Usage
 
-At first type the below
+Enter the following commands below
 
    ```
    $ bundle
    $ rake db:migrate
    ```
 
-Next, type the below and launch the server localhost:3000
+Next, type the command below and launch the server localhost:3000
 
    ```
    $ rails s
